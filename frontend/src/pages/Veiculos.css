@@ -1,0 +1,321 @@
+.veiculos-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.veiculo-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.veiculo-info strong {
+  color: #1a1a1a;
+}
+
+.veiculo-info small {
+  color: #999;
+  font-size: 12px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.status.available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.rented {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status.maintenance {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Reutiliza estilos da página Clientes */
+.veiculos-page .page-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.veiculos-page .page-header p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.veiculos-page .page-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.veiculos-page .search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  flex: 1;
+  max-width: 400px;
+  color: #999;
+}
+
+.veiculos-page .search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.veiculos-page .btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.veiculos-page .btn-primary:hover {
+  background: #0043a8;
+}
+
+.veiculos-page .btn-secondary {
+  padding: 10px 12px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.veiculos-page .btn-secondary:hover {
+  background: #e0e0e0;
+  border-color: #b0b0b0;
+}
+
+.veiculos-page .table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.veiculos-page .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.veiculos-page .data-table thead {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.veiculos-page .data-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+}
+
+.veiculos-page .data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.veiculos-page .status-select {
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.veiculos-page .status-select.available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.veiculos-page .status-select.rented {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.veiculos-page .status-select.maintenance {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.veiculos-page .status-select:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.veiculos-page .status-select:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.veiculos-page .status-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e5e7eb !important;
+  color: #6b7280 !important;
+}
+
+.veiculos-page .status-select:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.veiculos-page .data-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.veiculos-page .table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.veiculos-page .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.veiculos-page .btn-icon:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.veiculos-page .btn-icon.delete:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.veiculo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.veiculo-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.veiculo-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.veiculo-form input,
+.veiculo-form select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.veiculo-form input:focus,
+.veiculo-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.veiculo-form .error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: -4px;
+}
+
+.veiculo-form input.error {
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.availability-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #666;
+}
+
+.availability-cell svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.availability-text {
+  font-weight: 500;
+  color: #333;
+  font-size: 13px;
+}
+
+.availability-date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .veiculos-page .data-table {
+    font-size: 12px;
+  }
+
+  .veiculos-page .data-table th,
+  .veiculos-page .data-table td {
+    padding: 12px 8px;
+  }
+
+  .veiculos-page .page-actions {
+    flex-direction: column;
+  }
+
+  .veiculos-page .search-box {
+    max-width: 100%;
+  }
+}
+
+
